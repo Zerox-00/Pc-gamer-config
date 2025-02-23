@@ -63,3 +63,104 @@
     </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurateur PC Gamer</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { max-width: 600px; margin: auto; }
+        select, button { margin: 10px; padding: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Configurateur PC Gamer</h2>
+        
+        <label>Processeur :</label>
+        <select id="cpu">
+            <option value="100">Intel i3 - 100€</option>
+            <option value="200">Intel i5 - 200€</option>
+            <option value="350">Intel i7 - 350€</option>
+            <option value="500">Intel i9 - 500€</option>
+            <option value="120">AMD Ryzen 3 - 120€</option>
+            <option value="220">AMD Ryzen 5 - 220€</option>
+            <option value="370">AMD Ryzen 7 - 370€</option>
+            <option value="520">AMD Ryzen 9 - 520€</option>
+        </select>
+        <br>
+        
+        <label>Carte Mère :</label>
+        <select id="motherboard">
+            <option value="100">MSI B450 - 100€</option>
+            <option value="150">ASUS B550 - 150€</option>
+            <option value="200">Gigabyte X570 - 200€</option>
+        </select>
+        <br>
+        
+        <label>Carte Graphique :</label>
+        <select id="gpu">
+            <option value="200">GTX 1650 - 200€</option>
+            <option value="300">RTX 3060 - 300€</option>
+            <option value="600">RTX 3070 - 600€</option>
+            <option value="1000">RTX 4090 - 1000€</option>
+            <option value="250">AMD RX 6600 - 250€</option>
+            <option value="500">AMD RX 6800 XT - 500€</option>
+            <option value="900">AMD RX 7900 XTX - 900€</option>
+        </select>
+        <br>
+        
+        <label>RAM :</label>
+        <select id="ram">
+            <option value="50">Corsair 8Go - 50€</option>
+            <option value="80">G.Skill 16Go - 80€</option>
+            <option value="150">Kingston 32Go - 150€</option>
+        </select>
+        <br>
+        
+        <label>Stockage (SSD) :</label>
+        <select id="storage">
+            <option value="50">Samsung 256Go SSD - 50€</option>
+            <option value="100">Crucial 512Go SSD - 100€</option>
+            <option value="150">WD Black 1To SSD - 150€</option>
+        </select>
+        <br>
+        
+        <label>Alimentation :</label>
+        <select id="psu">
+            <option value="50">Cooler Master 500W - 50€</option>
+            <option value="80">Corsair 650W - 80€</option>
+            <option value="120">Seasonic 750W - 120€</option>
+        </select>
+        <br>
+        
+        <label>Boîtier :</label>
+        <select id="case">
+            <option value="50">NZXT H510 - 50€</option>
+            <option value="100">Lian Li PC-O11 - 100€</option>
+            <option value="150">Corsair iCUE 5000X - 150€</option>
+        </select>
+        <br>
+        
+        <button onclick="calculerPrix()">Calculer Prix</button>
+        <h3>Total : <span id="prixTotal">0</span>€</h3>
+    </div>
+    
+    <script>
+        function calculerPrix() {
+            let cpu = parseInt(document.getElementById("cpu").value);
+            let motherboard = parseInt(document.getElementById("motherboard").value);
+            let gpu = parseInt(document.getElementById("gpu").value);
+            let ram = parseInt(document.getElementById("ram").value);
+            let storage = parseInt(document.getElementById("storage").value);
+            let psu = parseInt(document.getElementById("psu").value);
+            let casePrice = parseInt(document.getElementById("case").value);
+            
+            let total = cpu + motherboard + gpu + ram + storage + psu + casePrice;
+            document.getElementById("prixTotal").textContent = total;
+        }
+    </script>
+</body>
+</html>
