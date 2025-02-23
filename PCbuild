@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurateur PC Gamer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Configurateur PC Gamer</h1>
+    
+    <form>
+        <label for="processeur">Processeur :</label>
+        <select id="processeur">
+            <option value="amd_ryzen_3_3200g">AMD Ryzen 3 3200G</option>
+            <option value="amd_ryzen_5_5600x">AMD Ryzen 5 5600X</option>
+            <option value="amd_ryzen_7_5800x">AMD Ryzen 7 5800X</option>
+            <option value="amd_ryzen_9_7950x">AMD Ryzen 9 7950X</option>
+            <option value="intel_core_i3_12100f">Intel Core i3-12100F</option>
+            <option value="intel_core_i5_13600k">Intel Core i5-13600K</option>
+            <option value="intel_core_i7_13700k">Intel Core i7-13700K</option>
+            <option value="intel_core_i9_13900k">Intel Core i9-13900K</option>
+        </select>
+        
+        <label for="carte_mere">Carte Mère :</label>
+        <select id="carte_mere">
+            <option value="msi_b450_tomahawk">MSI B450 TOMAHAWK MAX</option>
+            <option value="asus_tuf_b450">ASUS TUF B450-PLUS GAMING</option>
+            <option value="gigabyte_b550_aorus">Gigabyte B550 AORUS ELITE</option>
+            <option value="asus_rog_z690">ASUS ROG Strix Z690-E Gaming WiFi</option>
+        </select>
+        
+        <label for="ram">Mémoire RAM :</label>
+        <select id="ram">
+            <option value="corsair_ddr4_16gb">Corsair Vengeance LPX DDR4 16 Go</option>
+            <option value="kingston_ddr4_16gb">Kingston HyperX Fury DDR4 16 Go</option>
+            <option value="corsair_ddr5_16gb">Corsair Vengeance DDR5 16GB</option>
+        </select>
+        
+        <label for="ssd">Stockage (SSD) :</label>
+        <select id="ssd">
+            <option value="kingston_a2000_500gb">Kingston A2000 500 Go NVMe SSD</option>
+            <option value="samsung_970_evo">Samsung 970 EVO Plus 500 Go NVMe SSD</option>
+        </select>
+        
+        <label for="gpu">Carte Graphique :</label>
+        <select id="gpu">
+            <option value="nvidia_gtx_1660">NVIDIA GeForce GTX 1660 Super</option>
+            <option value="nvidia_rtx_3060">NVIDIA GeForce RTX 3060</option>
+            <option value="amd_rx_6800">AMD Radeon RX 6800</option>
+        </select>
+        
+        <label for="alimentation">Alimentation :</label>
+        <select id="alimentation">
+            <option value="corsair_cv550">Corsair CV550 - 550W</option>
+            <option value="msi_a650bn">MSI MAG A650BN 650W</option>
+            <option value="seasonic_gx850">Seasonic Focus GX-850W</option>
+        </select>
+        
+        <label for="boitier">Boîtier :</label>
+        <select id="boitier">
+            <option value="cooler_master_q300l">Cooler Master MasterBox Q300L</option>
+            <option value="fractal_design_focus">Fractal Design Focus G</option>
+        </select>
+        
+        <label for="watercooling">Watercooling :</label>
+        <select id="watercooling">
+            <option value="cooler_master_ml240l">Cooler Master MasterLiquid ML240L RGB</option>
+            <option value="arctic_liquid_freezer">Arctic Liquid Freezer II 120</option>
+        </select>
+        
+        <button type="submit">Valider la configuration</button>
+    </form>
+</body>
+</html>
